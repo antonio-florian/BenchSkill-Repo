@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  height: 3em;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  align-items: center;
+}
+
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+  padding: 1em 0;
+}
+
+.block {
+  color: gray;
+  text-align: center;
+  width: 10%;
+  height: 3em;
+  align-items: center;
+}
+
+.block:hover {
+  color: gray;
+  text-align: center;
+  background: white;
+  width: 10%;
+  height: 99%;
+}
+
+.block_input {
+  margin: 5px 15px 5px auto;
+  border-radius: 5px;
+  height: 2.8em;
+}

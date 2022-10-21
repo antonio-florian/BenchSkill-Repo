@@ -1,0 +1,41 @@
+.Form {
+  display: flex;
+  width: 50em;
+  height: 30em;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.inside-form {
+  width: 30em;
+  height: 20em;
+  border: 3px solid #494949;
+  border-radius: 25px;
+  padding: 20px;
+  justify-self: center;
+}
+
+.form-control {
+  height: 2em;
+  width: 18em;
+  margin-left: 5em;
+}
+
+#submitBtn {
+  margin-right: 16%;
+  margin-top: 5%;
+  width: 21em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.label {
+  float: left;
+}
+
+input,
+select {
+  float: right;
+  width: 60%;
+}
