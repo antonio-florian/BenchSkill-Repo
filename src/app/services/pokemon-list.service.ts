@@ -8,7 +8,13 @@ export class PokemonListService {
   url = 'http://pokeapi.co/api/v2/pokemon/?limit=30&offset=0';
 
   constructor(private http: HttpClient) {}
-  getPosts() {
-    return this.http.get(this.url);
+  getPokemons(limit: number, offset: number) {
+    return this.http.get(
+      `http://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`
+    );
+  }
+
+  getMoreData(name: string) {
+    return this.http.get(`http://pokeapi.co/api/v2/pokemon/${name}`);
   }
 }

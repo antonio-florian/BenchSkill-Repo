@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div
+  class="detail"
+  *ngFor="
+    let pokemon of pokemons
+      | paginate
+        : { itemsPerPage: 30, currentPage: page, totalItems: totalPokemons }
+  "
+>
+  <div class="PokemonCard">
+    <img [src]="pokemon.sprites.front_default" alt="Pokemon" />
+    <h4>{{ pokemon.name }}</h4>
+  </div>
+</div>
+
+<pagination-controls
+  class="my-pagination"
+  (pageChange)="page = $event; pokemons = []; getPokemons()"
+></pagination-controls>

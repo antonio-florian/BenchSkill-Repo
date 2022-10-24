@@ -1,0 +1,29 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Name </label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="name"
+      [(ngModel)]="name"
+    />
+    <label for="Email">Email </label>
+    <input
+      type="text"
+      name="Email"
+      id="Email"
+      placeholder="Email"
+      [(ngModel)]="Email"
+    />
+    <app-button class="btn" text="Login"></app-button>
+    <app-button
+      routerLink="/register-component"
+      id="left-btn"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      class="btn"
+      text="Register here"
+    ></app-button>
+  </form>
+</div>

@@ -1,0 +1,33 @@
+.detail {
+  display: inline-flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 2%;
+}
+
+.PokemonCard {
+  justify-content: center;
+  text-align: center;
+  height: 9em;
+  width: 12em;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgb(235, 236, 255);
+}
+
+.detail:hover {
+  cursor: pointer;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+pagination-controls {
+  text-align: right;
+  color: blue;
+}
+
+.pagination .number-item {
+  display: none;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .next {
+  background-color: blue;
+}

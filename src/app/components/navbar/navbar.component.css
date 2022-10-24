@@ -34,3 +34,19 @@ a:visited {
   border-radius: 5px;
   height: 2.8em;
 }
+
+.block-login {
+  text-align: center;
+  width: 5%;
+  height: 3em;
+  align-items: center;
+  margin-left: 30em;
+}
+
+.block-login:hover {
+  color: gray;
+  text-align: center;
+  background: white;
+  width: 5%;
+  height: 99%;
+}
