@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -6,27 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  name!: any;
-  Email!: any;
-  Price!: any;
-  Category!: any;
-  ImageURL!: any;
-  PhoneNumber!: any;
-  select!: any;
+  public signupForm!: FormGroup;
 
-  constructor() {}
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.signupForm = this.formBuilder.group({
+      email: [''],
+      password: [''],
+    });
+  }
 
   onSubmit() {
-    const updateProduct = {
-      name: this.name,
-      Email: this.Email,
-      Price: this.Price,
-      Category: this.Category,
-      ImageURL: this.ImageURL,
-      PhoneNumber: this.PhoneNumber,
-      select: this.select,
-    };
+    this.http
+      .post<any>('http://localhost:5000/Users', this.signupForm.value)
+      .subscribe(
+        (res) => {
+          alert('Succesfuly Registerd');
+          this.signupForm.reset();
+        },
+        (err) => {
+          alert('Something went wrong');
+        }
+      );
   }
 }

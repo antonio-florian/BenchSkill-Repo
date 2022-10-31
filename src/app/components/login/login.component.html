@@ -1,29 +1,30 @@
 <div class="container">
-  <form (ngSubmit)="onSubmit()">
-    <label for="name">Name </label>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <label for="email">Email </label>
     <input
+      formControlName="email"
       type="text"
-      name="name"
-      id="name"
-      placeholder="name"
-      [(ngModel)]="name"
+      name="email"
+      id="email"
+      placeholder="email"
     />
-    <label for="Email">Email </label>
+    <label for="password">Password </label>
     <input
+      formControlName="password"
       type="text"
-      name="Email"
-      id="Email"
-      placeholder="Email"
-      [(ngModel)]="Email"
+      name="password"
+      id="password"
+      placeholder="Password"
     />
-    <app-button class="btn" text="Login"></app-button>
-    <app-button
+    <input class="login-btn" type="submit" value="Login" />
+    <button
+      class="register-btn"
       routerLink="/register-component"
-      id="left-btn"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
-      class="btn"
-      text="Register here"
-    ></app-button>
+      value="Register here"
+    >
+      Register here
+    </button>
   </form>
 </div>

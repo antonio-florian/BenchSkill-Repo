@@ -1,37 +1,45 @@
 <div class="container">
-  <form (ngSubmit)="onSubmit()">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
     <label for="name">Name </label>
     <input
+      formControlName="name"
       type="text"
       name="name"
       id="name"
       placeholder="Name"
-      [(ngModel)]="name"
     />
     <label for="familyName">Family Name </label>
     <input
+      formControlName="familyName"
       type="text"
       name="familyName"
       id="familyName"
       placeholder="Family Name"
-      [(ngModel)]="familyName"
     />
-    <label for="number">Phone Number </label>
+    <label for="number">Phone number </label>
     <input
+      formControlName="number"
       type="text"
       name="number"
       id="number"
       placeholder="Phone number"
-      [(ngModel)]="number"
     />
     <label for="email">Email </label>
     <input
+      formControlName="email"
       type="text"
       name="email"
       id="email"
       placeholder="email"
-      [(ngModel)]="email"
     />
-    <app-button class="btn" text="Register"></app-button>
+    <label for="password">Password </label>
+    <input
+      formControlName="password"
+      type="text"
+      name="password"
+      id="password"
+      placeholder="password"
+    />
+    <input class="submit-btn" type="submit" />
   </form>
 </div>

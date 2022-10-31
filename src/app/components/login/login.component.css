@@ -18,15 +18,26 @@ input[type="text"] {
   padding: 20px;
 }
 
-#left-btn {
-  float: left;
-}
-
-.btn {
+.login-btn {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   background-color: #04aa6d;
   float: right;
 }
 
-.btn:hover {
+.register-btn {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #04aa6d;
+}
+
+.login-btn:hover,
+.register-btn:hover {
   background-color: #45a049;
 }
