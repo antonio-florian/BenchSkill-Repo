@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,6 +24,7 @@ export class RegisterComponent implements OnInit {
       number: [''],
       email: [''],
       password: [''],
+      isAdmin: false,
     });
   }
 
@@ -32,7 +33,7 @@ export class RegisterComponent implements OnInit {
       .post<any>('http://localhost:5000/Users', this.signupForm.value)
       .subscribe(
         (res) => {
-          alert('Succesfuly Registerd');
+          alert('Succesfuly Registered');
           this.signupForm.reset();
           this.router.navigate(['login-component']);
         },

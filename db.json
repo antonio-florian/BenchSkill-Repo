@@ -3,10 +3,12 @@
     {
       "name": "Antonio",
       "familyName": "Zlat",
-      "number": "0771272142",
-      "email": "antonyo.florian@gmail.com",
+      "number": "3453434734",
+      "email": "antonyo@gmail.com",
       "password": "1234",
+      "isAdmin": true,
       "id": 1
     }
-  ]
+  ],
+  "Products": []
 }

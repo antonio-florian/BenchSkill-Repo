@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { Subscription } from 'rxjs';
 
@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+  @Input() text: string | undefined;
   isAdmin!: boolean;
   subscription: Subscription;
 
