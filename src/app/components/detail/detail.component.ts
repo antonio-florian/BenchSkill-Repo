@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonListService } from 'src/app/services/pokemon-list.service';
 
 @Component({
   selector: 'app-detail',

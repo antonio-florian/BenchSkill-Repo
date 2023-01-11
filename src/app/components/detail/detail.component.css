@@ -1,0 +1,22 @@
+.Container {
+  width: 50%;
+  margin: 5em auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card {
+  margin: 1em auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.title {
+  color: aliceblue;
+  background-color: rgb(40, 197, 40);
+  height: 1.3em;
+  font-size: larger;
+  align-items: center;
+}
