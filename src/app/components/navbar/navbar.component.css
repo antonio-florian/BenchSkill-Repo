@@ -14,7 +14,6 @@ a:visited {
 }
 
 .block {
-  color: gray;
   text-align: center;
   width: 10%;
   height: 3em;
@@ -25,6 +24,18 @@ a:visited {
   color: gray;
   text-align: center;
   background: white;
+  width: 10%;
+  height: 99%;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.block-clicked {
+  color: gray !important;
+  text-align: center;
+  background: rgb(255, 255, 255);
   width: 10%;
   height: 99%;
 }

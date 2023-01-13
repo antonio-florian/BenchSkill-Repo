@@ -1,29 +1,23 @@
 <div class="header">
+  <a class="block disabled" ariaCurrentWhenActive="Logo">Pokemon</a>
   <a
-    routerLink="/pokemon-component"
+    routerLink="/home-component"
     class="block"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Pokemon</a
-  >
-  <a
-    routerLink="/"
-    class="block"
-    routerLinkActive="active"
+    routerLinkActive="block-clicked"
     ariaCurrentWhenActive="page"
     >Home</a
   >
   <a
     routerLink="/detail-component"
     class="block"
-    routerLinkActive="active"
+    routerLinkActive="block-clicked"
     ariaCurrentWhenActive="page"
     >Detail</a
   >
   <a
     routerLink="/create-product-component"
     class="block"
-    routerLinkActive="active"
+    routerLinkActive="block-clicked"
     ariaCurrentWhenActive="page"
     *ngIf="isAdmin"
     >Create Product</a
@@ -31,7 +25,7 @@
   <a
     routerLink="/product-list-component"
     class="block"
-    routerLinkActive="active"
+    routerLinkActive="block-clicked"
     ariaCurrentWhenActive="page"
     *ngIf="isAdmin"
     >Product List</a
@@ -39,7 +33,7 @@
   <a
     routerLink="/login-component"
     class="block-login"
-    routerLinkActive="active"
+    routerLinkActive="block-clicked"
     ariaCurrentWhenActive="page"
     >Login</a
   >
