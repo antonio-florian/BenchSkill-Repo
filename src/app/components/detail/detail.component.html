@@ -1,29 +1,63 @@
 <div class="Container">
   <div class="card" id="first-card">
-    <div class="title">Profile</div>
-    <div>Height:</div>
-    <div>Catch Rate:</div>
-    <div>Egg Groups:</div>
-    <div>Abilities:</div>
-    <div id="right-side">Weight:</div>
-    <div id="right-side">Gender Ratio:</div>
-    <div id="right-side">Hatch Steps:</div>
-    <div id="right-side">EVs:</div>
-  </div>
-  <div class="card">
-    <div class="title">Evolutions</div>
-    <div></div>
-  </div>
-  <div class="card">
-    <div class="title">Damage When Attacked</div>
-    <div>Element</div>
-    <div>Element</div>
-    <div>Element</div>
-    <div>Element</div>
-    <div>Element</div>
-    <div>Element</div>
-    <div>Element</div>
-    <div>Element</div>
-    <div>Element</div>
+    <div class="title-name">{{ pokemon.name }}</div>
+    <div class="panel">
+      <img
+        class="first-img"
+        [src]="pokemon.sprites.front_default"
+        alt="Pokemon"
+      />
+      <p class="stats-name">HP:</p>
+      <div class="statistics">
+        {{ pokemon.stats[0].base_stat }}
+      </div>
+      <p class="stats-name">Attack:</p>
+      <div class="statistics">
+        {{ pokemon.stats[1].base_stat }}
+      </div>
+      <p class="stats-name">Defense:</p>
+      <div class="statistics">
+        {{ pokemon.stats[2].base_stat }}
+      </div>
+      <p class="stats-name">Speed:</p>
+      <div class="statistics">
+        {{ pokemon.stats[5].base_stat }}
+      </div>
+      <p class="stats-name">Sp Atk:</p>
+      <div class="statistics">
+        {{ pokemon.stats[3].base_stat }}
+      </div>
+      <p class="stats-name">Sp Def:</p>
+      <div class="statistics">
+        {{ pokemon.stats[4].base_stat }}
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">Profile</div>
+      <div class class="profile-names">Height:</div>
+      <div class class="profile-names">Catch Rate:</div>
+      <div class class="profile-names">Egg Groups:</div>
+      <div class class="profile-names">Abilities:</div>
+      <div class class="profile-names">Weight:</div>
+      <div class class="profile-names">Gender Ratio:</div>
+      <div class class="profile-names">Hatch Steps:</div>
+      <div class class="profile-names">EVs:</div>
+    </div>
+    <div class="card">
+      <div class="title">Evolutions</div>
+      <div></div>
+    </div>
+    <div class="card">
+      <div class="title">Damage When Attacked</div>
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+      <div>Element</div>
+    </div>
   </div>
 </div>

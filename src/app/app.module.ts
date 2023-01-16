@@ -14,6 +14,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ButtonComponent } from './components/button/button.component';
+import { PokemonSearchComponent } from './components/pokemon-search/pokemon-search.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ButtonComponent } from './components/button/button.component';
     LoginComponent,
     RegisterComponent,
     ButtonComponent,
+    PokemonSearchComponent,
   ],
   imports: [
     BrowserModule,
