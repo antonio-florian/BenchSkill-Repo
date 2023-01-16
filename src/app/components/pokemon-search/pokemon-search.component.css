@@ -1,16 +1,7 @@
-label {
-  display: block;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
 input {
-  padding: 0.5rem;
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
-  display: block;
+  margin: 5px 15px 5px auto;
+  border-radius: 5px;
+  height: 2.8em;
 }
 
 input:focus {
