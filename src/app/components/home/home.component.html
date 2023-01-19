@@ -6,7 +6,11 @@
         : { itemsPerPage: 30, currentPage: page, totalItems: totalPokemons }
   "
 >
-  <div class="PokemonCard">
+  <div
+    class="PokemonCard"
+    [title]="pokemon.name + 'image'"
+    [routerLink]="['/detail-component', pokemon.name]"
+  >
     <img [src]="pokemon.sprites.front_default" alt="Pokemon" />
     <h4>{{ pokemon.name }}</h4>
   </div>

@@ -15,8 +15,44 @@
 
 .title {
   color: aliceblue;
-  background-color: rgb(40, 197, 40);
-  height: 1.3em;
+  background-color: rgb(31, 161, 31);
+  height: 2em;
   font-size: larger;
   align-items: center;
+}
+
+.title-name {
+  text-align: center;
+  color: aliceblue;
+  background-color: rgb(31, 161, 31);
+  height: 2em;
+  font-size: x-large;
+  text-transform: capitalize;
+}
+
+.panel {
+  height: 18em;
+  width: auto;
+  text-align: center;
+  padding: 15px;
+}
+
+.first-img {
+  position: relative;
+  bottom: -2em;
+  left: -12em;
+  height: 12em;
+  width: 12em;
+}
+
+.stats-name {
+  position: relative;
+  top: -10em;
+}
+
+.statistics {
+  position: relative;
+  top: -11.1em;
+  right: 8em;
+  text-align: right;
 }

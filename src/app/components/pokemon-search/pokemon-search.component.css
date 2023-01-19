@@ -1,9 +1,4 @@
-#search-component {
-  position: relative;
-}
-
 input {
-  margin-left: 20em;
   margin: 5px 15px 5px auto;
   border-radius: 5px;
   height: 2.8em;

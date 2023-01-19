@@ -21,13 +21,8 @@
 
 pagination-controls {
   text-align: right;
-  color: blue;
 }
 
-.pagination .number-item {
-  display: none;
-}
-
-.my-pagination ::ng-deep .ngx-pagination .next {
+pagination-controls span {
   background-color: blue;
 }
