@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   page = 1;
   totalPokemons!: number;
   subscription!: Subscription;
+  Offset = 0;
 
   constructor(private postData: PokemonListService) {}
 
@@ -20,9 +21,13 @@ export class HomeComponent implements OnInit {
   }
 
   getPokemons() {
-    this.postData.getPokemons(30, this.page + 0).subscribe((response: any) => {
-      this.totalPokemons = response.count;
-      console.log(response.count);
+    this.postData.getPokemons(30, this.Offset).subscribe((response: any) => {
+      this.totalPokemons = 60;
+      if (this.page === 1) {
+        this.Offset += 30;
+      } else if (this.page == 2) {
+        this.Offset -= 30;
+      }
 
       response.results.forEach((result: any) => {
         this.postData.getMoreData(result.name).subscribe((response: any) => {
