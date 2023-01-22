@@ -12,6 +12,7 @@ import { ViewEncapsulation } from '@angular/core';
 export class NavbarComponent implements OnInit {
   @Input() text: string | undefined;
   isAdmin!: boolean;
+  pokemonName!: string;
   subscription: Subscription;
 
   constructor(private userService: UserService) {
