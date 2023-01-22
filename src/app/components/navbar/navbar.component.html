@@ -8,7 +8,7 @@
     >Home</a
   >
   <a
-    routerLink="/detail-component/:pokemonName"
+    [routerLink]="'/detail-component/' + ['pokemonName']"
     class="block"
     routerLinkActive="block-clicked"
     ariaCurrentWhenActive="page"
@@ -37,5 +37,5 @@
     ariaCurrentWhenActive="page"
     >Login</a
   >
-  <app-pokemon-search></app-pokemon-search>
+  <input class="block_input" type="text" placeholder="Search Pokemon" />
 </div>
