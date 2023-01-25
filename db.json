@@ -37,5 +37,27 @@
       "id": 4
     }
   ],
-  "Products": []
+  "Products": [
+    {
+      "Description": "hnfgngfhgf",
+      "id": 1
+    },
+    {
+      "Description": "hfgnfgngfdgs",
+      "Select": "Landline",
+      "id": 2
+    },
+    {
+      "Description": "afsdggdfgdfdfg",
+      "phoneNumber": "33",
+      "Select": "Mobile",
+      "id": 3
+    },
+    {
+      "Description": "fgdfgdfgdfgfdfd",
+      "phoneNumber": "43543543",
+      "Select": "Landline",
+      "id": 4
+    }
+  ]
 }

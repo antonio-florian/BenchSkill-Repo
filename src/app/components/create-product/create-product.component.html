@@ -1,41 +1,83 @@
 <div class="container">
-  <form (ngSubmit)="onSubmit()">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
     <label for="name">Name </label>
-    <input type="text" name="name" id="name" placeholder="name" />
+    <input
+      formControlName="name"
+      type="text"
+      name="name"
+      id="name"
+      placeholder="name"
+    />
+    <div class="alert-danger" *ngIf="name?.touched && name?.invalid">
+      Name is not valid
+    </div>
     <label for="Description">Description </label>
     <input
+      formControlName="Description"
       type="text"
       name="Description"
       id="Description"
       placeholder="Description"
     />
+    <div
+      class="alert-danger"
+      *ngIf="Description?.touched && Description?.invalid"
+    >
+      Description is not valid
+    </div>
     <label for="Price">Price </label>
-    <input type="text" name="Price" id="Price" placeholder="Price" />
+    <input
+      formControlName="Price"
+      type="text"
+      name="Price"
+      id="Price"
+      placeholder="Price"
+    />
+    <div class="alert-danger" *ngIf="Price?.touched && Price?.invalid">
+      Price is not valid
+    </div>
     <label for="Category">Category </label>
-    <select id="Category" name="Category">
+    <select formControlName="Category" id="Category" name="Category">
       <option value="Electronics">Electronics</option>
       <option value="Cloths">Cloths</option>
       <option value="Blankets">Blankets</option>
     </select>
-    <label for="Image URL">Image URL </label>
+    <div class="alert-danger" *ngIf="Category?.touched && Category?.invalid">
+      Category is not valid
+    </div>
+    <label for="Image_URL">Image_URL </label>
     <input
+      formControlName="Image_URL"
       type="text"
-      name="Image URL"
-      id="Image URL"
-      placeholder="Image URL"
+      name="Image_URL"
+      id="Image_URL"
+      placeholder="Image_URL"
     />
-    <label for="Phone Number"> Phone Number </label>
+    <div class="alert-danger" *ngIf="Image_URL?.touched && Image_URL?.invalid">
+      Image_URL is not valid
+    </div>
+    <label for="phoneNumber"> Phone Number </label>
     <input
+      formControlName="phoneNumber"
       type="text"
-      name=" Phone Number"
-      id=" Phone Number"
-      placeholder=" Phone Number"
+      name=" phoneNumber"
+      id=" phoneNumber"
+      placeholder=" phoneNumber"
     />
+    <div
+      class="alert-danger"
+      *ngIf="phoneNumber?.touched && phoneNumber?.invalid"
+    >
+      phone number is not valid
+    </div>
     <label for="Select">Select </label>
-    <select id="Select" name="Select">
+    <select formControlName="Select" id="Select" name="Select">
       <option value="Mobile">Mobile</option>
       <option value="Landline">Landline</option>
     </select>
-    <app-button class="btn" text="Save"></app-button>
+    <div class="alert-danger" *ngIf="Select?.touched && Select?.invalid">
+      Select is not valid
+    </div>
+    <input class="submit-btn" type="submit" />
   </form>
 </div>
