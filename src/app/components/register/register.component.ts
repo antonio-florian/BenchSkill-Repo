@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  public signupForm!: FormGroup;
+  signupForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -19,27 +19,75 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      name: [''],
-      familyName: [''],
-      number: [''],
-      email: [''],
-      password: [''],
+      name: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.pattern('^[a-zA-Z ]*$'),
+        ],
+      ],
+      familyName: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.pattern('^[a-zA-Z ]*$'),
+        ],
+      ],
+      number: [
+        '',
+        Validators.required,
+        Validators.pattern('[0-9]{3} [0-9]{3} [0-9]{3}'),
+      ],
+      email: ['', [Validators.required, Validators.email]],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$'),
+        ],
+      ],
       isAdmin: false,
     });
   }
 
+  get name() {
+    return this.signupForm.get('name');
+  }
+
+  get familyName() {
+    return this.signupForm.get('familyName');
+  }
+
+  get email() {
+    return this.signupForm.get('email');
+  }
+
+  get number() {
+    return this.signupForm.get('number');
+  }
+
+  get password() {
+    return this.signupForm.get('password');
+  }
+
   onSubmit() {
-    this.http
-      .post<any>('http://localhost:5000/Users', this.signupForm.value)
-      .subscribe(
-        (res) => {
-          alert('Succesfuly Registered');
-          this.signupForm.reset();
-          this.router.navigate(['login-component']);
-        },
-        (err) => {
-          alert('Something went wrong');
-        }
-      );
+    if (this.signupForm.valid) {
+      this.http
+        .post<any>('http://localhost:5000/Users', this.signupForm.value)
+        .subscribe(
+          (res) => {
+            alert('Succesfuly Registered');
+            this.signupForm.reset();
+            this.router.navigate(['login-component']);
+          },
+          (err) => {
+            alert('Something went wrong');
+          }
+        );
+    } else {
+      alert('signupForm not valid');
+    }
   }
 }

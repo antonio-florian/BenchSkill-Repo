@@ -8,6 +8,9 @@
       id="name"
       placeholder="Name"
     />
+    <div class="alert-danger" *ngIf="name?.touched && name?.invalid">
+      Name is not valid
+    </div>
     <label for="familyName">Family Name </label>
     <input
       formControlName="familyName"
@@ -16,6 +19,12 @@
       id="familyName"
       placeholder="Family Name"
     />
+    <div
+      class="alert-danger"
+      *ngIf="familyName?.touched && familyName?.invalid"
+    >
+      Family Name is not valid
+    </div>
     <label for="number">Phone number </label>
     <input
       formControlName="number"
@@ -24,6 +33,9 @@
       id="number"
       placeholder="Phone number"
     />
+    <div class="alert-danger" *ngIf="number?.touched && number?.invalid">
+      Phone Number is not valid
+    </div>
     <label for="email">Email </label>
     <input
       formControlName="email"
@@ -32,6 +44,9 @@
       id="email"
       placeholder="email"
     />
+    <div class="alert-danger" *ngIf="email?.touched && email?.invalid">
+      Email is not valid
+    </div>
     <label for="password">Password </label>
     <input
       formControlName="password"
@@ -40,6 +55,10 @@
       id="password"
       placeholder="password"
     />
+    <div class="alert-danger" *ngIf="password?.touched && password?.invalid">
+      Password should have minimum 8 characters, at least 1 uppercase letter, 1
+      lowercase letter and 1 number
+    </div>
     <input class="submit-btn" type="submit" />
   </form>
 </div>

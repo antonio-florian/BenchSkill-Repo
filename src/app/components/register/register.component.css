@@ -2,7 +2,7 @@ input[type="text"],
 select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
@@ -13,7 +13,7 @@ select {
 .container {
   width: 40%;
   margin: 2em auto;
-  height: 30em;
+  height: auto;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -35,9 +35,20 @@ select {
   border-radius: 4px;
   cursor: pointer;
   background-color: #04aa6d;
-  float: right;
+  margin-left: 85%;
+  margin-top: 1%;
 }
 
 .submit-btn:hover {
   background-color: #45a049;
+}
+
+.alert {
+  color: #f2f2f2;
+}
+
+.alert-danger {
+  color: red;
+  background-color: rgb(204, 204, 204);
+  padding: 10px;
 }

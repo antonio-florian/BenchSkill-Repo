@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-product',
@@ -6,27 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-product.component.css'],
 })
 export class CreateProductComponent implements OnInit {
-  name!: any;
-  Description!: any;
-  Price!: any;
-  Category!: any;
-  ImageURL!: any;
-  PhoneNumber!: any;
-  select!: any;
-
   constructor() {}
 
   ngOnInit(): void {}
 
-  onSubmit() {
-    const updateProduct = {
-      name: this.name,
-      Description: this.Description,
-      Price: this.Price,
-      Category: this.Category,
-      ImageURL: this.ImageURL,
-      PhoneNumber: this.PhoneNumber,
-      select: this.select,
-    };
-  }
+  onSubmit() {}
 }
