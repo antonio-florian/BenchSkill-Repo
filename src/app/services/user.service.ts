@@ -8,6 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UserService {
   private isAdmin: boolean = false;
   private subject = new Subject<any>();
+  url = 'http://localhost:5000';
 
   constructor(private http: HttpClient) {}
 
@@ -18,5 +19,9 @@ export class UserService {
 
   onToggle(): Observable<any> {
     return this.subject.asObservable();
+  }
+
+  getProducts(): Observable<any> {
+    return this.http.get(this.url + '/Products');
   }
 }

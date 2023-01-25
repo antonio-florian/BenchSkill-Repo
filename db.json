@@ -39,25 +39,23 @@
   ],
   "Products": [
     {
-      "Description": "hnfgngfhgf",
-      "id": 1
-    },
-    {
-      "Description": "hfgnfgngfdgs",
-      "Select": "Landline",
-      "id": 2
-    },
-    {
-      "Description": "afsdggdfgdfdfg",
-      "phoneNumber": "33",
+      "name": "logo",
+      "Description": "it is a logo",
+      "Price": "90",
+      "Category":"Electronics",
+      "Image_URL": "https://static.javatpoint.com/computer/images/what-is-the-url.png",
+      "phoneNumber": "045654645645",
       "Select": "Mobile",
-      "id": 3
-    },
-    {
-      "Description": "fgdfgdfgdfgfdfd",
-      "phoneNumber": "43543543",
-      "Select": "Landline",
-      "id": 4
+      "id": 1
+    },    {
+      "name": "logo",
+      "Description": "it is the same logo",
+      "Price": "99",
+      "Category":"Electronics",
+      "Image_URL": "https://static.javatpoint.com/computer/images/what-is-the-url.png",
+      "phoneNumber": "09944666233",
+      "Select": "Mobile",
+      "id": 2
     }
   ]
 }
