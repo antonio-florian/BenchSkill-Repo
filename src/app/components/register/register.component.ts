@@ -37,8 +37,7 @@ export class RegisterComponent implements OnInit {
       ],
       number: [
         '',
-        Validators.required,
-        Validators.pattern('[0-9]{3} [0-9]{3} [0-9]{3}'),
+        [Validators.required, Validators.pattern('[0-9]{3} [0-9]{3} [0-9]{3}')],
       ],
       email: ['', [Validators.required, Validators.email]],
       password: [
@@ -87,6 +86,7 @@ export class RegisterComponent implements OnInit {
           }
         );
     } else {
+      console.log(this.signupForm);
       alert('signupForm not valid');
     }
   }

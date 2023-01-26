@@ -19,11 +19,13 @@ export class CreateProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm = this.formBuilder.group({
-      name: [
+      productName: [
         '',
-        Validators.required,
-        Validators.minLength(3),
-        Validators.pattern('^[a-zA-Z ]*$'),
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.pattern('^[a-zA-Z ]*$'),
+        ],
       ],
       Description: [
         '',
@@ -33,15 +35,33 @@ export class CreateProductComponent implements OnInit {
           Validators.pattern('^[a-zA-Z ]*$'),
         ],
       ],
-      Price: ['', Validators.required],
-      Category: ['', Validators.required],
-      Image_URL: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
-      Select: ['', Validators.required],
+      Price: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern('^[1-9]d{0,7}(?:.d{1,4})?|.d{1,4}$'),
+        ],
+      ],
+      Category: ['', [Validators.required]],
+      Image_URL: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(
+            '^https?://(?:[a-z0-9-]+.)+[a-z]{2,6}(?:/[^/#?]+)+.(?:jpg|gif|png)$'
+          ),
+        ],
+      ],
+      phoneNumber: [
+        '',
+        [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')],
+      ],
+      Select: ['', [Validators.required]],
     });
   }
-  get name() {
-    return this.createForm.get('name');
+
+  get productName() {
+    return this.createForm.get('productName');
   }
 
   get Description() {
@@ -74,7 +94,7 @@ export class CreateProductComponent implements OnInit {
         .post<any>('http://localhost:5000/Products', this.createForm.value)
         .subscribe(
           (res) => {
-            alert('Succesfuly Registered');
+            alert('Succesfuly Created product');
             this.createForm.reset();
             this.router.navigate(['product-list-component']);
           },
@@ -83,7 +103,8 @@ export class CreateProductComponent implements OnInit {
           }
         );
     } else {
-      alert('createForm not valid');
+      console.log(this.createForm);
+      alert('Form not valid');
     }
   }
 }

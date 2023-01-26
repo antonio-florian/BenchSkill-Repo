@@ -1,15 +1,18 @@
 <div class="container">
   <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
-    <label for="name">Name </label>
+    <label for="productName">Product name </label>
     <input
-      formControlName="name"
+      formControlName="productName"
       type="text"
-      name="name"
-      id="name"
-      placeholder="name"
+      productName="productName"
+      id="productName"
+      placeholder="productName"
     />
-    <div class="alert-danger" *ngIf="name?.touched && name?.invalid">
-      Name is not valid
+    <div
+      class="alert-danger"
+      *ngIf="productName?.touched && productName?.invalid"
+    >
+      product name is not valid
     </div>
     <label for="Description">Description </label>
     <input

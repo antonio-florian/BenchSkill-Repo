@@ -8,7 +8,7 @@
 .ProductCard {
   justify-content: center;
   text-align: center;
-  height: 20em;
+  height: auto;
   width: 20em;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
   background-color: rgb(255, 255, 255);

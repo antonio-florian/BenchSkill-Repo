@@ -19,22 +19,13 @@
       "id": 2
     },
     {
-      "name": "d",
-      "familyName": "",
-      "number": "",
-      "email": "",
-      "password": "",
+      "name": "Pokemon",
+      "familyName": "Trainer",
+      "number": "565 515 511",
+      "email": "trainer.pokemon@gmail.com",
+      "password": "Pass@4ord",
       "isAdmin": false,
       "id": 3
-    },
-    {
-      "name": "",
-      "familyName": "",
-      "number": "",
-      "email": "",
-      "password": "",
-      "isAdmin": false,
-      "id": 4
     }
   ],
   "Products": [
@@ -42,20 +33,31 @@
       "name": "logo",
       "Description": "it is a logo",
       "Price": "90",
-      "Category":"Electronics",
+      "Category": "Electronics",
       "Image_URL": "https://static.javatpoint.com/computer/images/what-is-the-url.png",
       "phoneNumber": "045654645645",
       "Select": "Mobile",
       "id": 1
-    },    {
+    },
+    {
       "name": "logo",
       "Description": "it is the same logo",
       "Price": "99",
-      "Category":"Electronics",
+      "Category": "Electronics",
       "Image_URL": "https://static.javatpoint.com/computer/images/what-is-the-url.png",
       "phoneNumber": "09944666233",
       "Select": "Mobile",
       "id": 2
+    },
+    {
+      "productName": "Leash",
+      "Description": "A perfect leash for walking your pikkachu",
+      "Price": "23",
+      "Category": "Cloths",
+      "Image_URL": "https://d7rh5s3nxmpy4.cloudfront.net/C2079/snc/1/strong_leash_1.jpg",
+      "phoneNumber": "4543543549",
+      "Select": "Landline",
+      "id": 3
     }
   ]
 }
