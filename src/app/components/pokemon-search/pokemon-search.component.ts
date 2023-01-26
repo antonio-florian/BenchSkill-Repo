@@ -11,7 +11,7 @@ import { PokemonListService } from 'src/app/services/pokemon-list.service';
   styleUrls: ['./pokemon-search.component.css'],
 })
 export class PokemonSearchComponent implements OnInit {
-  pokemons!: any;
+  pokemons!: Observable<any>;
   private searchTerms = new Subject<string>();
 
   search(term: string): void {

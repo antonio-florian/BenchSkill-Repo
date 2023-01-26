@@ -3,7 +3,8 @@
 
   <ul class="search-result">
     <li *ngFor="let pokemon of pokemons | async">
-      <a routerLink=>
+      <a routerLink="/detail-component/{{ pokemon.name }}"
+        >{{ pokemon.name }}
       </a>
     </li>
   </ul>

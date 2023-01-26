@@ -26,6 +26,15 @@
       "password": "Pass@4ord",
       "isAdmin": false,
       "id": 3
+    },
+    {
+      "name": "gabi",
+      "familyName": "zlat",
+      "number": "0770720443",
+      "email": "gabi_zlat@yahoo.com",
+      "password": "h3royna2A",
+      "isAdmin": false,
+      "id": 4
     }
   ],
   "Products": [
@@ -58,6 +67,16 @@
       "phoneNumber": "4543543549",
       "Select": "Landline",
       "id": 3
+    },
+    {
+      "productName": "Leash",
+      "Description": "o cana foarte frumoasa",
+      "Price": "1500",
+      "Category": "Electronics",
+      "Image_URL": "https://www.micacera.ro/image/cache/catalog/Cani/Pistrui%20de%20aur_4M_1-1000x1000.jpg",
+      "phoneNumber": "4543543543",
+      "Select": "Mobile",
+      "id": 4
     }
   ]
 }
