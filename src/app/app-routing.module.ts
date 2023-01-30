@@ -9,8 +9,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home-component', pathMatch: 'full' },
   { path: 'home-component', component: HomeComponent },
+  { path: '', redirectTo: 'home-component', pathMatch: 'full' },
   { path: 'register-component', component: RegisterComponent },
   { path: 'login-component', component: LoginComponent },
   { path: 'detail-component/:pokemonName', component: DetailComponent },
