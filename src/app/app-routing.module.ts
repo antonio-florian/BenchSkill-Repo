@@ -13,7 +13,11 @@ const routes: Routes = [
   { path: '', redirectTo: 'home-component', pathMatch: 'full' },
   { path: 'register-component', component: RegisterComponent },
   { path: 'login-component', component: LoginComponent },
-  { path: 'detail-component/:pokemonName', component: DetailComponent },
+  {
+    path: 'detail-component',
+    component: DetailComponent,
+    children: [{ path: ':pokemonName', component: DetailComponent }],
+  },
   { path: 'create-product-component', component: CreateProductComponent },
   { path: 'product-list-component', component: ProductListComponent },
 ];

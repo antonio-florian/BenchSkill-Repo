@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
       } else if (this.page == 2) {
         this.Offset -= 30;
       }
+      console.log;
 
       response.results.forEach((result: any) => {
         this.postData.getMoreData(result.name).subscribe((response: any) => {

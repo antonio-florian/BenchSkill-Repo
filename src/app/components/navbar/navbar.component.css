@@ -32,14 +32,6 @@ a:visited {
   pointer-events: none;
 }
 
-.block-clicked {
-  color: gray !important;
-  text-align: center;
-  background: rgb(255, 255, 255);
-  width: 10%;
-  height: 99%;
-}
-
 .block_input {
   margin: 5px 15px 5px auto;
   border-radius: 5px;

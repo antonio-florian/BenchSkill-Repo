@@ -1,0 +1,7 @@
+.block-clicked {
+  color: gray !important;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  width: 10%;
+  height: 99%;
+}

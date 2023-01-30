@@ -8,10 +8,11 @@
     >Home</a
   >
   <a
-    routerLink="/detail-component/:productName"
+    routerLink="/detail-component"
     class="block"
     routerLinkActive="block-clicked"
     ariaCurrentWhenActive="page"
+    [routerLinkActiveOptions]="{ exact: false }"
     >Detail</a
   >
   <a
