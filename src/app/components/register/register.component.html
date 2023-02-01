@@ -8,8 +8,11 @@
       id="name"
       placeholder="Name"
     />
+    <div class="alert-danger" *ngIf="name?.touched && name?.pristine">
+      Name is mandatory!
+    </div>
     <div class="alert-danger" *ngIf="name?.touched && name?.invalid">
-      Name is not valid
+      Name is not valid, must contain at least 3 alphabetic characters!
     </div>
     <label for="familyName">Family Name </label>
     <input
@@ -21,9 +24,15 @@
     />
     <div
       class="alert-danger"
+      *ngIf="familyName?.touched && familyName?.pristine"
+    >
+      Family Name is mandatory!
+    </div>
+    <div
+      class="alert-danger"
       *ngIf="familyName?.touched && familyName?.invalid"
     >
-      Family Name is not valid
+      Family Name is not valid, must contain at least 3 alphabetic characters!
     </div>
     <label for="number">Phone number </label>
     <input
@@ -33,8 +42,11 @@
       id="number"
       placeholder="Phone number"
     />
+    <div class="alert-danger" *ngIf="number?.touched && number?.pristine">
+      Phone Number is mandatory!
+    </div>
     <div class="alert-danger" *ngIf="number?.touched && number?.invalid">
-      Phone Number is not valid
+      Phone Number is not valid!
     </div>
     <label for="email">Email </label>
     <input
@@ -44,8 +56,11 @@
       id="email"
       placeholder="email"
     />
+    <div class="alert-danger" *ngIf="email?.touched && email?.pristine">
+      Email is mandatory!
+    </div>
     <div class="alert-danger" *ngIf="email?.touched && email?.invalid">
-      Email is not valid
+      Email is not valid!
     </div>
     <label for="password">Password </label>
     <input
@@ -55,6 +70,9 @@
       id="password"
       placeholder="password"
     />
+    <div class="alert-danger" *ngIf="password?.touched && password?.pristine">
+      Password is mandatory!
+    </div>
     <div class="alert-danger" *ngIf="password?.touched && password?.invalid">
       Password should have minimum 8 characters, at least 1 uppercase letter, 1
       lowercase letter and 1 number
