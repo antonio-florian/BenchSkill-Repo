@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   signupForm!: FormGroup;
+  isAdminBoolean!: boolean;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -47,7 +48,7 @@ export class RegisterComponent implements OnInit {
           Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$'),
         ],
       ],
-      isAdmin: false,
+      isAdmin: this.isAdminBoolean,
     });
   }
 
@@ -69,6 +70,10 @@ export class RegisterComponent implements OnInit {
 
   get password() {
     return this.signupForm.get('password');
+  }
+
+  get isAdmin() {
+    return this.signupForm.get('isAdmin');
   }
 
   onSubmit() {
