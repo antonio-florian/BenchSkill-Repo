@@ -9,6 +9,7 @@ import { PokemonListService } from 'src/app/services/pokemon-list.service';
 })
 export class DetailComponent implements OnInit {
   pokemon: any | undefined;
+  pokemonS: any | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,12 +18,24 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPokemon();
+    this.getPokemonS();
+    console.log(this.pokemon);
+    console.log(this.getPokemon());
   }
 
   getPokemon(): void {
     const name = this.route.snapshot.paramMap.get('pokemonName');
+    console.log(name);
     this.pokemonInfoService
       .getMoreData(name)
       .subscribe((pokemon) => (this.pokemon = pokemon));
+  }
+
+  getPokemonS(): void {
+    const name = this.route.snapshot.paramMap.get('pokemonName');
+    console.log(name);
+    this.pokemonInfoService
+      .getPokemonSpeciesData(name)
+      .subscribe((pokemonS) => (this.pokemonS = pokemonS));
   }
 }

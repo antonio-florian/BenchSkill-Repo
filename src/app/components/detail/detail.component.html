@@ -34,30 +34,47 @@
     </div>
     <div class="card">
       <div class="title">Profile</div>
-      <div class class="profile-names">Height:</div>
-      <div class class="profile-names">Catch Rate:</div>
-      <div class class="profile-names">Egg Groups:</div>
-      <div class class="profile-names">Abilities:</div>
-      <div class class="profile-names">Weight:</div>
+      <div class class="profile-names">Height: {{ pokemon.height }}</div>
+      <div class class="profile-names">
+        Catch Rate: {{ pokemonS.capture_rate }}
+      </div>
+      <div class class="profile-names">
+        Egg Groups: {{ pokemonS.egg_groups[0].name }}
+      </div>
+      <div class class="profile-names">
+        Abilities: {{ pokemon.abilities[0].ability.name }}
+      </div>
+      <div class class="profile-names">Weight: {{ pokemon.weight }}</div>
       <div class class="profile-names">Gender Ratio:</div>
-      <div class class="profile-names">Hatch Steps:</div>
+      <div class class="profile-names">
+        Hatch Steps: {{ pokemonS.hatch_counter }}
+      </div>
       <div class class="profile-names">EVs:</div>
     </div>
     <div class="card">
-      <div class="title">Evolutions</div>
+      <div class="title">Evolutions:</div>
       <div></div>
     </div>
     <div class="card">
       <div class="title">Damage When Attacked</div>
-      <div>Element</div>
-      <div>Element</div>
-      <div>Element</div>
-      <div>Element</div>
-      <div>Element</div>
-      <div>Element</div>
-      <div>Element</div>
-      <div>Element</div>
-      <div>Element</div>
+      <div class="card-elements">
+        <div style="background-color: #fcbb42" class="element left">GROUND</div>
+        <div style="background-color: #f70776" class="element left">
+          PSYCHIC
+        </div>
+        <div style="background-color: #7c73e6" class="element left">FLYING</div>
+        <div style="background-color: #ff6f3c" class="element left">FIRE</div>
+        <div style="background-color: #79c2d0" class="element left">ICE</div>
+        <div style="background-color: #f48db4" class="element right">FAIRY</div>
+        <div style="background-color: #eb2632" class="element right">
+          FIGHTING
+        </div>
+        <div style="background-color: #00bbf0" class="element right">WATER</div>
+        <div style="background-color: #ffc93c" class="element right">
+          ELECTRIC
+        </div>
+        <div style="background-color: #8cc152" class="element right">GRASS</div>
+      </div>
     </div>
   </div>
 </div>
