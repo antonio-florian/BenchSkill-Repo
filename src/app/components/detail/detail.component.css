@@ -56,3 +56,21 @@
   right: 8em;
   text-align: right;
 }
+
+.card-elements {
+  margin: 1em auto;
+  height: 15em;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.element {
+  margin: 1%;
+  text-align: center;
+  width: 40%;
+  height: 25px;
+  color: white;
+}

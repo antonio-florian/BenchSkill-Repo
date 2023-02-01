@@ -17,4 +17,8 @@ export class PokemonListService {
   getMoreData(name: string | null) {
     return this.http.get(`http://pokeapi.co/api/v2/pokemon/${name}`);
   }
+
+  getPokemonSpeciesData(name: string | null) {
+    return this.http.get(`http://pokeapi.co/api/v2/pokemon-species/${name}`);
+  }
 }
