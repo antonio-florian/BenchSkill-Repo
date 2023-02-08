@@ -15,6 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ButtonComponent } from './components/button/button.component';
 import { PokemonSearchComponent } from './components/pokemon-search/pokemon-search.component';
+import { EmptyPageComponent } from './components/empty-page/empty-page.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { PokemonSearchComponent } from './components/pokemon-search/pokemon-sear
     RegisterComponent,
     ButtonComponent,
     PokemonSearchComponent,
+    EmptyPageComponent,
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,
